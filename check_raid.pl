@@ -3533,6 +3533,12 @@ sub commands {
 	}
 }
 
+sub active ($) {
+        my ($this) = @_;
+        # check if dmraid is empty
+        return  keys ( %{$this->parse} ) > 0;
+}
+
 sub sudo {
 	my ($this, $deep) = @_;
 	# quick check when running check
